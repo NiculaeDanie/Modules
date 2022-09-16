@@ -1,0 +1,3 @@
+<div *ngFor="let i of teachers; trackBy: getIdTracking">
+    <a [routerLink]="['/teacher',i.id]">{{i.name}}</a>
+</div>
