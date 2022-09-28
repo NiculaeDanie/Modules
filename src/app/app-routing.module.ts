@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  { path: 'teacher', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) }];
+  { path: 'add-book', loadChildren: () => import('./crud-components/add-book/add-book.module').then(m => m.AddBookModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
