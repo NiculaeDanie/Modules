@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from '../app-routing.module';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input'
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, RouterModule, HttpClientModule, AppRoutingModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
   ],
   exports: [
-    CommonModule, RouterModule, HttpClientModule, AppRoutingModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }

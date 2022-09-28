@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Teacher } from '../Dto/teacher';
 import { TeacherServiceService } from '../teacher-service.service';
 
@@ -10,11 +11,16 @@ import { TeacherServiceService } from '../teacher-service.service';
 })
 export class HomeComponent implements OnInit {
   teachers?: Teacher[];
+  teacherForm?: FormGroup;
   constructor(private service: TeacherServiceService) { }
 
   ngOnInit(): void {
-    this.teachers= this.service.getTeachers();
-    console.log(this.teachers);
+    this.teacherForm = new FormGroup({
+      name: new FormControl(''),
+      description: new FormControl(''),
+      password: new FormControl(''),
+      email: new FormControl('')
+    });
     
   }
   public getIdTracking(index: number, item: Teacher){

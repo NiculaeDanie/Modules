@@ -1,0 +1,12 @@
+.container{
+    margin-top: 1cm;
+    width: 50%;
+    background-color: #ADCF9F;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 5px;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
